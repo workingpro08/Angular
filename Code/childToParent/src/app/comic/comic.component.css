@@ -1,0 +1,47 @@
+/* Child container styling */
+.child-container {
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px solid #2196F3;
+    border-radius: 12px;
+    background: #90d0ee;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Child heading */
+  .child-heading {
+    color: #1E88E5;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  /* Child value display */
+  .child-value {
+    font-size: 20px;
+    color: #0D47A1;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  /* Button styling */
+  .child-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background: linear-gradient(45deg, #1E88E5, #42A5F5);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .child-button:hover {
+    background: linear-gradient(45deg, #1976D2, #2196F3);
+    transform: translateY(-2px);
+  }
+  
+  .child-button:active {
+    transform: scale(0.95);
+  }
+  

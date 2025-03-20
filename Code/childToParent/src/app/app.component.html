@@ -1,0 +1,16 @@
+<!--<h1>Parent Component</h1>
+<p>{{x}}</p>
+<app-comic #bujji></app-comic>
+<p>{{bujji.c}}</p>
+<button (click)="bujji.incr()">click</button>-->
+
+<div class="parent-container">
+    <h1>Parent Component</h1>
+    <p class="value-display animated-value">Child Name : {{x}}</p>
+    <app-comic #bujji></app-comic>
+    <p class="value-display animated-value">Child Value : {{bujji.c}}</p>
+    <p class="value-display animated-value">Child Value : {{bujji.name}}</p>
+    <button class="styled-button" (click)="bujji.incr()">Increase Child Value</button>
+    <button class="styled-button" (click)="bujji.show()">Display Child Name</button>
+  </div>
+  

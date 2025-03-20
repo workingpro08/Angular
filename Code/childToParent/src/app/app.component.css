@@ -1,0 +1,68 @@
+/* Parent container styling */
+.parent-container {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 30px;
+    border: 3px solid #4CAF50;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background: #85d39d;
+    text-align: center;
+  }
+  
+  /* Heading styling */
+  h1 {
+    color: #2c3e50;
+    font-size: 32px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  
+  /* Value display styling */
+  .value-display {
+    font-size: 20px;
+    color: #555;
+    margin: 12px 0;
+    font-weight: bold;
+  }
+  
+  /* Button styling */
+  .styled-button {
+    padding: 12px 24px;
+    margin: 15px;
+    font-size: 18px;
+    color: white;
+    background: linear-gradient(45deg, #4CAF50, #66BB6A);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    outline: none;
+  }
+  
+  /* Hover and active states */
+  .styled-button:hover {
+    background: linear-gradient(45deg, #43A047, #388E3C);
+    transform: translateY(-2px);
+  }
+  
+  .styled-button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Animation for values */
+  .animated-value {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
