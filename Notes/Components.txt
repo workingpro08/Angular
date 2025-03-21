@@ -44,3 +44,16 @@
 
       ->//details.component.html
       <ng-content></ng-content>
+
+-->Sending data from child components to parent components:
+  --Child to parent:to send data from child components to parent components we can use DOM(Document Object Model) manipulation using,
+    i.@viewChild/@viewChildren:
+      These decorators are used to access and manipulate the DOM elements of child components within the components view.
+      @viewChild--it is used to access single value or single DOM element of child component.
+      ->'Syntax':@viewChild(childSelector/element) elementReference
+    
+    ii.Template reference variables:we can manipulate any child items or any elements in angular 
+      using template reference variables.These are the custom names asssigned using annotation and 
+      can be used for DOM manipulation.
+
+      ->'Syntax':<element #name></element>
