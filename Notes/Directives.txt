@@ -1,0 +1,58 @@
+-->"Directives":Directives are used to manipulate the DOM(Document object model) like making an element disappear or applying
+   certain styles based on user actions,creating or deleting elements dynamically.These directives controls the behaviour 
+   of elements.
+  ->Directives are three types:
+    i.structural directives
+    ii.property directives
+    iii.custom directives
+
+    i.structural directives:These directives are used to manipulate the structure of elements.
+      There are 3 structural directives named as:
+      a.ngIf
+      b.ngSwitch
+      c.ngFor
+
+      a.ngIf:ngIf is a structural directive used to toggle a certain element.
+        ->ngIf will check a condition and if the condition is true,it will execute its block of element 
+          else it executes else block if it exists.
+
+        ->simple if:
+            ->eg:<div *ngIf="isShow">
+                    <h2 class="text-white">Hello world</h2>
+                 </div>
+
+        ->if-else:
+           ->eg:<div *ngIf="isSigned else loginElse">
+                    <h2>Welcome Saiteja!</h2>
+                </div>
+                <ng-template #loginElse>
+                    <h2>Please login</h2>
+                </ng-template>
+
+      b.ngSwitch:when we have multiple conditions to verify, instead of using if else if ladder, we can use ngSwitch.
+           ->eg:<select [(ngModel)]="user">
+                    <option value="parent">parent</option>
+                    <option value="admin">admin</option>
+                    <option value="student">student</option>
+                </select>
+                <div [ngSwitch]="user">
+                    <h1 *ngSwitchCase="'admin'">Welcome to admin</h1>
+                    <h1 *ngSwitchCase="'parent'">Welcome to parent</h1>
+                    <h1 *ngSwitchCase="'student'">Welcome to student</h1>
+                    <h1 *ngDefaultCase>Please enter proper value</h1>
+                </div>
+
+      c.ngFor:ngFor is also a structural directive which is used for repetitive UI, based on a condition.
+           ->eg:<element *ngFor="let x of array">
+                 //code
+                </element>
+
+    ii.property directives:These directives are used to change the properties of elements in DOM.
+       a.ngClass
+       b.ngStyle
+
+       a.ngClass:ngClass is a property directive which is used to add dynamic class names.
+         ->Syntax:<element [ngClass]={'class1':true}>something</element>
+
+       b.ngStyle:ngStyle is a property directive which is used to add dynamic styles.
+         ->Syntax:<element [ngStyle]="{'property name':true/false?'value1':'value2'}>some text</element>
