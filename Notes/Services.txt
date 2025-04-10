@@ -1,0 +1,24 @@
+->"Services":Services are used to store common sharable data between components.
+  ->It also performs common methods needed for components.
+  ->Services main purpose is to provide communication between multiple components.
+->Advantages of services:
+  i.it is used to separate presentation logic from business logic.
+  ii.it is used by multiple components so, code reusability avoids code duplication.
+  iii.with services testing will be easy.
+
+->How to use service?
+  a.create a service using command:ng generate service service-name
+  b.write some logic/data in service class.
+  c.import the service into components.
+  d.inject the service into component using constructor.
+  e.use the service.
+  
+
+->"API":Application programming interface is used to connect frontend and backend of prorgramming/Application.
+  ->It is also used for integrating 3rd party Applications to deal with api's.
+  ->Angular have a default service called httpClient.
+  ->httpClient requires a module called httpClientModule.
+    step-1:Import httpClientModule in app module.
+    step-2:Inject httpClient service and call methods like get,post, put,delete etc..,
+    step-3:httpClient methods return observable which is a series of asynchronous operations.
+    step-4:observables need to be subscribed to get the result.
