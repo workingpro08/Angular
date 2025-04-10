@@ -1,0 +1,33 @@
+->"RxJS":RxJS (Reactive Extensions for JavaScript) is a library for composing asynchronous and event-based programs 
+ using observable sequences.
+
+->Core concepts in RxJS:
+  1.Observable:Observables are used to connect multiple promises sequentially.Unlike promises,which return data once,
+    observables return data every time new data is emitted.
+    ->Syntax:element.observable.subscribe(
+               (res) => console.log("Success:", res),
+               (error) => console.log("Error:", error),
+               () => console.log("Completed")
+             );
+
+  2.Operators:Operators are built-in functions provided by RxJS to manipulate observable data.
+   ->Common operators include:
+     i.forEach
+     ii.map
+     iii.filter
+     iv.of
+     v.subscribe
+
+  3.Subjects:Subjects are special types of observables that allow multiple subscribers to receive the same data stream.
+   ->:Types of Subjects:
+     i.Basic Subject:Used for multicasting without any default value.
+      ->eg:const sub = new Subject();
+     ii.BehaviorSubject:Used for multicasting with a default value.
+      ->eg:const sub = new BehaviorSubject(defaultValue);
+     iii.ReplaySubject:Used for multicasting and replaying past values to new subscribers.
+      ->eg:const sub = new ReplaySubject(size);
+     iv.AsyncSubject:Emits only the last value before completion and is used for multicasting asynchronously.
+      ->eg:const sub = new AsyncSubject();
+
+->Note:RxJS provides a powerful way to handle asynchronous programming using observables,operators,and subjects.
+  It enables developers to create complex event-driven programs efficiently.
