@@ -1,0 +1,43 @@
+-->"Forms":Forms are used to collect users data. Angular handles the forms in two ways:
+   i.Template forms:These forms are created using template code(html).
+   ii.Reactive forms :These forms are created using component code(ts), also called as component forms.
+
+   i.Template Driven Forms:
+    ->Every form element like input,buttons etc.., are instances of formControl.
+    ->formControl instances contains properties like pristine,dirty,valid,invalid,required etc..,
+    ->These forms supports two way data binding using ngModel directive.
+    ->To handle inputs and forms we use formControl and formGroup.
+
+   ->formControl instances have various properties such as:
+    i.pristine:true if the user has not changed the previous value.
+    ii.dirty:true if the user has modified the previous value.
+    iii.touched:true if the user has clicked/selected the input at least once.
+    iv.unTouched:true if the user has never interacted with the input.
+    v.valid:true if the input has no validation errors.
+    vi.invalid:true if the input has validation errors.
+    vii.errors:Errors are stored in an array for each form control.
+      ->example of accessing errors:this.email.errors;
+      ->To check if a control has an error in the template:
+        <div *ngIf="email.errors?.required">Email is required</div>
+        <div *ngIf="email.errors?.email">Enter a valid email</div>
+
+
+   ii.Reactive Forms/Component-Driven Forms:
+    ->These forms are used for dynamic form elements.They use TS instead of HTML code.
+    ->FormGroup:creates a form group that contains multiple form controls.Used to manage 
+      the state and validation of a group of form controls.
+      ->eg:this.myForm = new FormGroup({
+           name: new FormControl(''),
+           email: new FormControl(''),
+           });
+    ->FormControl:Creates an individual form control to track the value and validity of an input element.
+      ->eg:this.name = new FormControl('');
+    ->Validators:Provides a set of built-in validators to validate form inputs.
+     ->Validators.required:Ensures the field is not empty.
+     ->Validators.minLength(n):Ensures a minimum length.
+     ->Validators.maxLength(n):Ensures a maximum length.
+     ->Validators.email:Ensures a valid email format.
+    ->FormControlName:Binds a form control to a form group in the HTML template.
+      ->eg:<form [formGroup]="myForm">
+               <input formControlName="name">
+           </form>
