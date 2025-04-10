@@ -1,0 +1,9 @@
+->Frontend developers develope lot of components.
+ ->Integrating all of them might create a havoc/break in total application,so frontend developers 
+   test each component/module separately called unit testing.
+->Angular have testing frameworks like:
+ i.jasmine:popular testing framework default in angular.
+ ii.karma:it launches a test runner into browsers and run the tests,default in angular.
+ iii.protractor:an end to end testing framework for angular.
+
+->There will be a class TestBed which is used in spec files for testing you can use in "ng test".
