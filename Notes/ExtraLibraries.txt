@@ -1,4 +1,4 @@
-1. for tailwind, please install, npm install tailwindcss @tailwindcss/postcss postcss
+1)1. for tailwind, please install, npm install tailwindcss @tailwindcss/postcss postcss
 ---------------------------------------------------------------------------------------
 2. Create a .postcssrc.json file in the root of your project and 
 add the @tailwindcss/postcss plugin to your PostCSS configuration.
@@ -15,4 +15,20 @@ add the @tailwindcss/postcss plugin to your PostCSS configuration.
 @import "tailwindcss";
 ---------------------------------------------------------------------------------------
 add Extension Tailwind CSS IntelliSense
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+2)1.Angular Special Library using Bootstrap:ng-bootstrap
+
+1. Install ng-bootstrap and Bootstrap:
+  i)ng add @ng-bootstrap/ng-bootstrap
+  ii)npm install bootstrap
+---------------------------------------------------------------------------------------
+2.Import Bootstrap in styles.css:
+  @import url('path-to-bootstrap.min.css');
+---------------------------------------------------------------------------------------
+  npm install bootstrap-icons
+---------------------------------------------------------------------------------------
+4.Import Bootstrap Icons in styles.css:
+  @import url('path-to-bootstrap-icons.css');
 ---------------------------------------------------------------------------------------
