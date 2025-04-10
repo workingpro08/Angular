@@ -1,0 +1,61 @@
+-->"Angular Service Communication Example":
+============================================
+  ->Enable message sharing between two components(RajuComponent and RaniComponent) via a shared service(MyServiceService).
+
+->Service:MyServiceService
+---------------------------
+export class MyServiceService {
+  msg = '';
+  addMsg(m: string) {
+    this.msg = m;
+  }
+  receiveMsg() {
+    return this.msg;
+  }
+}
+->Purpose:Acts as a message holder and transfer medium.
+->addMsg(m: string):Stores the message.
+->receiveMsg():Returns the stored message.
+
+->Component-1:RajuComponent(Sender)
+------------------------------------
+->HTML:
+--------
+<p>raju works!</p>
+<input type="text" [(ngModel)]="m">
+<button (click)="send()">Send Message</button>
+
+->TypeScript:
+--------------
+m = '';
+constructor(public ms: MyServiceService) {}
+send() {
+  this.ms.addMsg(this.m);
+}
+->Role:Takes user input and sends the message using the service.
+->Uses two-way binding ([(ngModel)]) for input.
+->Calls addMsg() method of the service on button click.
+
+->Component-2:RaniComponent(Receiver)
+-------------------------------------
+->HTML:
+--------
+<p>rani works!</p>
+<button (click)="receive()">Receive</button>
+<p>{{message}}</p>
+
+->TypeScript:
+--------------
+message = '';
+constructor(public ms: MyServiceService) {}
+receive() {
+  this.message = this.ms.receiveMsg();
+}
+->Role:Retrieves and displays the message from the service.
+->Calls receiveMsg() on button click and updates local variable.
+
+->Data Flow Summary:
+---------------------
+Input (RajuComponent) --> Service --> Output (RaniComponent)
+ 1. RajuComponent sets the message via addMsg().
+ 2. RaniComponent retrieves it via receiveMsg().
