@@ -1,0 +1,45 @@
+->"Pipes":Pipes are used to transform the data,represented using the symbol ' | '.
+  ->There are two types of pipes:
+    1.Default pipes:These pipes are already provided by angular.They are:
+      a.uppercase:it is used to transform text to uppercase.
+        ->eg:"saiteja"|uppercase //Output:SAITEJA
+      b.lowercase:it is used to transform text to lowercase.
+        ->eg:"YOGESH"|lowercase //Output:yogesh
+      c.currency:it is used to convert given value into specific currency.
+        ->eg:25|currency //Output:$25.00 (by default currency is US dollar)
+        ->we can pass parameters like country code.
+        ->eg:25|currency:"INR" //Output:₹25.00
+      d.date:it is used to convert date into specific format.
+        ->eg:dt=new Date()
+
+        ->Code:dt|date:'dd/MM/yy' //for date
+        ->Code:dt|date:'HH:mm:ss' //for time
+
+      e.number:it is used to format numbers with specific decimal places.
+        ->Syntax:value|number:'minIntegerDigits.minDecimalDigits-maxDecimalDigits'
+      f.json:it is used to print object value as json.
+        ->eg:let obj={name:"sai",age:24}
+
+        ->Code:obj|json //Output:{name:"sai",age:24}
+
+      g.async:it is used to resolve an observable directly.
+        ->Syntax:observable|async
+
+    2.Custom pipes:To create our own pipe, we use the command : ng generate pipe pipe-name
+        ->It creates pipename.pipe.ts and spec.ts files in src/app folder.
+        ->In pipe file,pipetransform generates a transform method in which we can define how ever we want.
+        ->A pipe must return a value.
+
+        ->eg:ng g p evenOdd:it will create evenOdd.pipe.ts
+        ->eg:export function evenOddpipe extends pipeTransform{
+          transform(value:number){
+            if(value%2==0){
+              return even;
+            }
+            else{
+              return odd;
+            }
+          }
+          }       
+        ->//app.component.html
+          <p>{{25|evenOdd}}</p> //Output:odd
