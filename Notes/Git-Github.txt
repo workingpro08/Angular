@@ -1,0 +1,25 @@
+->"Git":Git is a distributed version control system (VCS) used to track changes in source code.
+->Installation & Verification:
+ ->Git needs to be downloaded (provided by Oracle).
+ ->After installation, verify using "git -v" in command prompt.
+
+->Basic Git Commands:
+ 1.Initialize a Repository:git init
+ 2.Add Files to Staging Area:git add .
+ 3.Commit Changes:git commit -m "Your commit message"
+ 4.Configure Git (First-Time Setup):
+  ->git config --global user.name "YourUsername" 
+  ->git config --global user.email "YourEmail@example.com"
+
+
+->"GitHub":GitHub is an online platform (by Microsoft) used for code sharing,collaboration,and deployment.
+ ->Getting Started with GitHub:
+  1.Go to GitHub
+  2.Sign up or log in
+  3.Create a new repository
+
+->Connecting Local Git to GitHub:
+ 1. Add Remote Repository:Link your local repository to GitHub.
+  ->git remote add origin "repository URL"
+ 2. Push Code to GitHub:Upload your local code to GitHub.
+  ->git push -u origin main/master
